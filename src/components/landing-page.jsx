@@ -24,34 +24,12 @@ To read more about using these font, please visit the Next.js documentation:
 - Pages Directory: https://nextjs.org/docs/pages/building-your-application/optimizing/fonts
 **/
 import Link from "next/link"
+import React from "react";
+import {FRIENDS_FAMILY_LOANS_DESC, AUTOMATED_SYSTEM_DESC, FINANCIAL_WELLNESS_DESC} from "../app/constants"
 
 export function LandingPage() {
   return (
-    (<div className="flex flex-col min-h-[100dvh]">
-      <header
-        className="bg-gray-950 text-gray-50 px-4 md:px-6 py-4 flex items-center justify-between">
-        <nav className="flex items-center gap-6">
-          <Link className="font-bold text-lg" href="#">
-            SARF
-          </Link>
-          <Link className="text-sm hover:underline scroll-smooth" href="#">
-            About
-          </Link>
-          <Link className="text-sm hover:underline scroll-smooth" href="#">
-            Contact
-          </Link>
-        </nav>
-        <div className="flex items-center gap-4">
-          <Link className="text-sm font-medium hover:underline" href="#">
-            Login
-          </Link>
-          <Link
-            className="inline-flex h-8 items-center justify-center rounded-md bg-gray-50 px-4 text-sm font-medium text-gray-950 transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-950 focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
-            href="#">
-            Sign Up
-          </Link>
-        </div>
-      </header>
+    <div className="flex flex-col min-h-[100dvh]">
       <main className="flex-1 snap-y snap-mandatory overflow-y-scroll">
         <section className="flex items-center justify-center bg-gray-950 text-gray-50 px-4 md:px-6 h-[80dvh] snap-start">
           <div className="space-y-8 text-center max-w-[700xpx]">
@@ -68,28 +46,19 @@ export function LandingPage() {
             {/* <h2 className="text-2xl font-bold mb-8">About</h2> */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div className="space-y-4">
-                <RocketIcon className="h-12 w-12 mx-auto" />
-                <h3 className="text-2xl font-bold">Innovative Solutions</h3>
-                <p className="text-gray-400 md:text-xl/relaxed">
-                  Our cutting-edge platform and expert team are dedicated to providing innovative solutions to help your
-                  business thrive.
-                </p>
+                <UserGroupIcon className="h-12 w-12 mx-auto" />
+                {/* <h3 className="text-2xl font-bold">Innovative Solutions</h3> */}
+                <p className="text-gray-400 md:text-xl/relaxed">{FRIENDS_FAMILY_LOANS_DESC}</p>
               </div>
               <div className="space-y-4">
-                <BoltIcon className="h-12 w-12 mx-auto" />
-                <h3 className="text-2xl font-bold">Unparalleled Performance</h3>
-                <p className="text-gray-400 md:text-xl/relaxed">
-                  Experience lightning-fast speed and uncompromising reliability with our platform, designed to deliver
-                  exceptional results.
-                </p>
+                <BankNotes className="h-12 w-12 mx-auto" />
+                {/* <h3 className="text-2xl font-bold">Unparalleled Performance</h3> */}
+                <p className="text-gray-400 md:text-xl/relaxed">{FINANCIAL_WELLNESS_DESC}</p>
               </div>
               <div className="space-y-4">
-                <UsersIcon className="h-12 w-12 mx-auto" />
-                <h3 className="text-2xl font-bold">Dedicated Support</h3>
-                <p className="text-gray-400 md:text-xl/relaxed">
-                  Our expert team is here to provide personalized support and guidance, ensuring your success every step
-                  of the way.
-                </p>
+                <CheckIcon className="h-12 w-12 mx-auto" />
+                {/* <h3 className="text-2xl font-bold">Dedicated Support</h3> */}
+                <p className="text-gray-400 md:text-xl/relaxed">{AUTOMATED_SYSTEM_DESC}</p>
               </div>
             </div>
           </div>
@@ -119,11 +88,11 @@ export function LandingPage() {
           </div>
         </section>
       </main>
-    </div>)
-  );
+    </div>
+  )
 }
 
-function BoltIcon(props) {
+function BankNotes(props) {
   return (
     (<svg
       {...props}
@@ -136,8 +105,7 @@ function BoltIcon(props) {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round">
-      <path
-        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
       <circle cx="12" cy="12" r="4" />
     </svg>)
   );
@@ -184,7 +152,7 @@ function PhoneIcon(props) {
 }
 
 
-function RocketIcon(props) {
+function UserGroupIcon(props) {
   return (
     (<svg
       {...props}
@@ -197,18 +165,13 @@ function RocketIcon(props) {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round">
-      <path
-        d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
-      <path
-        d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
-      <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
-      <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
     </svg>)
   );
 }
 
 
-function UsersIcon(props) {
+function CheckIcon(props) {
   return (
     (<svg
       {...props}
@@ -221,10 +184,10 @@ function UsersIcon(props) {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round">
-      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-      <circle cx="9" cy="7" r="4" />
-      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
     </svg>)
   );
 }
+
+
+// https://docs.google.com/forms/d/e/1FAIpQLScTzaS0z9TKD29BK4Crxmzw87wR4KvI65edT56qzisTUO7zkg/viewform
