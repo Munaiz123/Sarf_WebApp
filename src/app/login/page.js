@@ -42,7 +42,8 @@ const LoginPage = () => {
             />
           </div>
           <div>
-            <button type="submit" className="w-full"> Sign in </button>
+            {/* <button type="submit" className="w-full"> Sign in </button> */}
+            <button type="submit" className="w-full inline-flex h-8 items-center justify-center bg-amber-400 text-gray-50 rounded-md text-lg font-medium "> Sign In </button>
           </div>
           <div className="flex items-center justify-between">
             <div className="text-sm">
