@@ -16,6 +16,18 @@
   }
 }
 
+h1, h2, h4, nav{
+  @apply text-amber-400;
+}
+
+input:focus {
+  border-color: #eac42a;  /* Changes the border color when the input is focused */ 
+  border:ring-primary;
+}
+input{
+  color:black
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
