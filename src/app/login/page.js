@@ -11,7 +11,7 @@ const LoginPage = () => {
           <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-foreground"> Sign in to your account</h2>
           <p className="mt-2 text-center text-sm text-muted-foreground">
             Or{" "}
-            <Link href="/signup" className="font-medium text-primary hover:text-primary/80" prefetch={false}>
+            <Link href="/signup" className="font-medium text-primary underline hover:text-primary/80" prefetch={false}>
               sign up for a new account
             </Link>
           </p>
@@ -47,7 +47,7 @@ const LoginPage = () => {
           </div>
           <div className="flex items-center justify-between">
             <div className="text-sm">
-              <Link href="#" className="font-medium text-primary hover:text-primary/80" prefetch={false}> Forgot your password?</Link>
+              <Link href="#" className="font-medium text-primary underline hover:text-primary/80" prefetch={false}> Forgot your password?</Link>
             </div>
           </div>
         </form>
