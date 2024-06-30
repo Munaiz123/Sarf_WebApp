@@ -1,8 +1,19 @@
 
+"use client"
 import Link from "next/link"
 import React from "react"
 
+import { useUser } from '../UserContext';
+
 const LoginPage = () => {
+
+  const {login} = useUser()
+
+  const loginUser = () =>{
+    login()
+  }
+
+
   return (
     <div className="flex min-h-[100dvh] flex-col items-center justify-center bg-background px-4 py-12 sm:px-6 lg:px-8">
       <div className="w-full max-w-md space-y-8">
@@ -43,7 +54,7 @@ const LoginPage = () => {
           </div>
           <div>
             {/* <button type="submit" className="w-full"> Sign in </button> */}
-            <button type="submit" className="w-full inline-flex h-8 items-center justify-center bg-amber-400 text-gray-50 rounded-md text-lg font-medium "> Sign In </button>
+            <button type="submit" onClick={loginUser} className="w-full inline-flex h-8 items-center justify-center bg-amber-400 text-gray-50 rounded-md text-lg font-medium "> Sign In </button>
           </div>
           <div className="flex items-center justify-between">
             <div className="text-sm">
