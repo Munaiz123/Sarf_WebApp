@@ -31,10 +31,13 @@ input{
 }
 
 main{
-  @apply p-10
+  /* @apply pr-20; */
+  /* display: flex */
+  
 }
 
 body {
+  @apply px-4;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,

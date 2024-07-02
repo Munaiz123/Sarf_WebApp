@@ -9,19 +9,19 @@ export default function Component() {
   const [isPinned, setIsPinned] = useState(false)
   return (
     <div
-      className={`fixed top-0 left-0 bottom-0 bg-black p-4 flex flex-col justify-around items-center transition-all duration-300 ${
+      className={`fixed top-0 left-0 bottom-0 bg-yellow-500 p-4 flex flex-col justify-around items-center transition-all duration-300 ${
         isExpanded ? "w-64" : "w-16"
       } ${isPinned ? "static" : "fixed"}`}
       onMouseEnter={() => setIsExpanded(true)}
       onMouseLeave={() => !isPinned && setIsExpanded(false)}
     >
-      <button className="text-yellow-500">
+      <button>
         <HomeIcon className="w-8 h-8" />
       </button>
-      <button className="text-yellow-500">
+      <button>
         <DollarSignIcon className="w-8 h-8" />
       </button>
-      <button className="text-yellow-500">
+      <button>
         <WalletIcon className="w-8 h-8" />
       </button>
       <div className="flex items-center gap-2">
@@ -49,7 +49,7 @@ function DollarSignIcon(props) {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
+      stroke="black"
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -70,7 +70,7 @@ function HomeIcon(props) {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
+      stroke="black"
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -91,7 +91,7 @@ function PaperclipIcon(props) {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
+      stroke="black"
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -111,7 +111,7 @@ function WalletIcon(props) {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
+      stroke="black"
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -121,3 +121,7 @@ function WalletIcon(props) {
     </svg>
   )
 }
+
+// className="text-yellow-500"
+// className="text-yellow-500"
+// className="text-yellow-500"

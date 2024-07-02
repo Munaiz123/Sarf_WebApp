@@ -1,4 +1,5 @@
 "use client"
+
 import React, { createContext, useContext, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
@@ -72,8 +73,8 @@ export const UserProvider = ({ children }) => {
 
 
   const logout = () =>{
-    setUser(initalState)
     push('/')
+    setUser(initalState)
     return
   }
 

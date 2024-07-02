@@ -1,14 +1,17 @@
 
+"use client"
 import Link from "next/link"
 import React from "react"
+
+import withAuth from "../UserAuth"
 
 function Dashboard() {
 
     return (
-        <main className="p-10">
-            <h5>Dashboard</h5>
-      </main>
+        <div className="px-20 md:px-40">
+            <h1>Dashboard</h1>
+      </div>
     )
   }
 
-export default Dashboard
+export default withAuth(Dashboard)

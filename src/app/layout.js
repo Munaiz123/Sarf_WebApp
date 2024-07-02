@@ -1,7 +1,9 @@
 import Navbar from "../components/Navbar"
-import { UserProvider} from './UserContext'
+import Sidebar from '../components/Sidebar'
+import LandingPage from './page'
+
+import { UserProvider } from './UserContext';
 import { Inter } from "next/font/google";
-// import "./globals.css";
 import "../../public/index.css"
 
 const inter = Inter({ subsets: ["latin"] });
@@ -12,13 +14,14 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en">
       <body>
-      <UserProvider>
-        <Navbar />
-        {children}
-      </UserProvider>
+        <UserProvider>
+          <Navbar />
+          {children}
+        </UserProvider>
       </body>
     </html>
   );
