@@ -9,8 +9,8 @@ export default function Component() {
   const [isPinned, setIsPinned] = useState(false)
   return (
     <div
-      className={`fixed top-0 left-0 bottom-0 bg-yellow-500 p-4 flex flex-col justify-around items-center transition-all duration-300 ${
-        isExpanded ? "w-64" : "w-16"
+      className={`fixed top-0 left-0 bottom-0 rounded-xl bg-amber-400 p-4 flex flex-col justify-around items-center transition-all duration-300 ${
+        isExpanded ? "w-32" : "w-16"
       } ${isPinned ? "static" : "fixed"}`}
       onMouseEnter={() => setIsExpanded(true)}
       onMouseLeave={() => !isPinned && setIsExpanded(false)}
