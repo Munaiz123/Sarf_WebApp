@@ -31,7 +31,7 @@ input{
 }
 
 main{
-  /* @apply pr-20; */
+  @apply p-20;
   /* display: flex */
   
 }
