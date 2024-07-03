@@ -3,17 +3,17 @@
 import Link from "next/link"
 import React from "react"
 
-import withAuth from "../UserAuth"
+import withAuth from "../../UserAuth"
 
-function Dashboard() {
+function WalletDashboard() {
 
     return (
       <div className="px-10 md:px-20 lg:px-30">
         <main>
-          <h1>Dashboard</h1>
+          <h1>My Wallet</h1>
         </main>
       </div>
     )
   }
 
-export default withAuth(Dashboard)
+export default withAuth(WalletDashboard)
