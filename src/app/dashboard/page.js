@@ -8,11 +8,9 @@ import withAuth from "../UserAuth"
 function Dashboard() {
 
     return (
-      <div className="px-10">
-        <main>
-          <h1>Dashboard</h1>
-        </main>
-      </div>
+      <main>
+        <h1>Dashboard</h1>
+      </main>
     )
   }
 

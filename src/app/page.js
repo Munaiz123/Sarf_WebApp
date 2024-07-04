@@ -56,12 +56,12 @@ export default () => {
                 <MailIcon className="h-5 w-5" />
                 contact@sarf.space
               </Link>
-              <Link
+              {/* <Link
                 className="inline-flex items-center gap-2 text-sm font-medium hover:underline"
                 href="#">
                 <PhoneIcon className="h-5 w-5" />
                 +1 (234) 567-890
-              </Link>
+              </Link> */}
             </div>
           </div>
         </section>
