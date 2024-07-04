@@ -54,7 +54,7 @@ export default () => {
                 className="inline-flex items-center gap-2 text-sm font-medium hover:underline"
                 href="#">
                 <MailIcon className="h-5 w-5" />
-                info@sarf.com
+                contact@sarf.space
               </Link>
               <Link
                 className="inline-flex items-center gap-2 text-sm font-medium hover:underline"
