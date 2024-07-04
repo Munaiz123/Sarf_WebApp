@@ -4,8 +4,10 @@ import { useState } from "react"
 import {HomeIcon, DollarSignIcon, WalletIcon , PaperclipIcon, MenuIcon} from '../components/Icons'
 import React from 'react'
 import Link from "next/link"
+import { useRouter } from 'next/navigation'
 
 export default function Component() {
+  const router = useRouter()
   const [isExpanded, setIsExpanded] = useState(false)
   const [isPinned, setIsPinned] = useState(false)
   const [showSidebar, setShowSidebar] = useState(false)
@@ -15,25 +17,24 @@ export default function Component() {
           <MenuIcon onClick={()=> setShowSidebar(!showSidebar)} className="lg:hidden xl:hidden" />
         </button>
         <div onMouseEnter={() => setIsExpanded(true)} onMouseLeave={() => !isPinned && setIsExpanded(false)}
-          className={`lg:visible xl:visible fixed top-0 left-0 bottom-0 rounded-xl bg-amber-400 p-4 flex flex-col justify-around items-center transition-all duration-300 ${
-            isExpanded ? "w-32" : "w-16"
-          } ${isPinned ? "static" : "fixed"}
+          className={`lg:visible xl:visible fixed top-0 left-0 bottom-0 rounded-xl bg-amber-400 p-4 flex flex-col justify-around items-center transition-all duration-300 
+            ${isExpanded ? "w-28" : "w-16"}
+            ${isPinned ? "static" : "fixed"}
             ${showSidebar ? "" : "invisible"}`}
         >
-          <button>
-            <MenuIcon onClick={()=> setShowSidebar(!showSidebar)} className="lg:hidden xl:hidden w-8 h-8 text-black" />
+          <button onClick={()=> setShowSidebar(!showSidebar)} className="lg:hidden xl:hidden w-8 h-8 text-black">
+            <MenuIcon />
           </button>
 
           <Link href="/dashboard">
-            <HomeIcon className="w-8 h-8" />
+            <HomeIcon onClick={()=> setShowSidebar(!showSidebar)} className="w-8 h-8" />
           </Link>
-          <button>
-            <Link href="/dashboard/payments">
-                <DollarSignIcon className="w-8 h-8" />
-            </Link>
-          </button>
+          <Link href="/dashboard/payments">
+            <DollarSignIcon onClick={()=> setShowSidebar(!showSidebar)} className="w-8 h-8" />
+          </Link>
+          
           <Link href="/dashboard/wallet">
-            <WalletIcon className="w-8 h-8" />
+            <WalletIcon onClick={()=> setShowSidebar(!showSidebar)} className="w-8 h-8" />
           </Link>
 
           <div className="flex items-center gap-2">
