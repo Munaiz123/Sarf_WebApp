@@ -31,7 +31,7 @@ input{
 }
 
 main{
-  @apply px-10 lg:px-40 xl:px-40;
+  @apply px-5 lg:px-40;
   /* @apply xl:px-30; */
   /* display: flex */
   
