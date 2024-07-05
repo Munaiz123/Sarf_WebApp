@@ -27,9 +27,9 @@ const Dashboard = () => {
                 <Bell className="text-white" />
             </div> */}
 
-            {/* <h1 className="text-2xl font-bold mb-4">Dashboard</h1> */}
+            <h1 className="bg-gradient-to-r from-white to-amber-400 inline-block text-transparent bg-clip-text text-3xl font-bold mb-4">Overview</h1>
 
-            <div className="bg-amber-400 rounded-lg p-4 mb-6">
+            <div className="bg-gradient-to-r from-amber-400 to-amber-600 rounded-lg p-4 mb-6">
                 <p className="text-sm">Available Balance</p>
                 <p className="text-4xl font-bold">$10,000.00</p>
             </div>
@@ -41,7 +41,7 @@ const Dashboard = () => {
                 </div>
                 <div className="flex space-x-4 overflow-x-auto">
                 {upcomingPayments.map((payment) => (
-                    <div key={payment.id} className="bg-amber-400 rounded-lg p-4 flex-shrink-0 w-32">
+                    <div key={payment.id} className="bg-gradient-to-r from-amber-400 to-amber-600 rounded-lg p-4 flex-shrink-0 w-32">
                     {/* <img src="/api/placeholder/48/48" alt={payment.name} className="w-12 h-12 rounded-full mb-2" /> */}
                     <p className="text-black text-sm">{payment.name}</p>
                     <p className="text-black font-bold">${payment.amount}</p>
