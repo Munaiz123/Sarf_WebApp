@@ -30,11 +30,11 @@ const LoansPage = () => {
         <h1 className="bg-gradient-to-r from-white to-amber-400 inline-block text-transparent bg-clip-text text-3xl font-bold mb-4">Loans</h1>
 
         <div className="bg-gradient-to-r from-amber-400 to-amber-600 rounded-3xl p-6 mb-8">
-          <h2 className="text-xl mb-2">{showOwed ? 'You Owe' : 'Owed to You'}</h2>
+          {/* <h2 className="text-xl mb-2">{showOwed ? 'You Owe' : 'Owed to You'}</h2> */}
           <p className={`text-4xl font-bold mb-2 ${showOwed ? 'text-red-500' : 'text-green-500'}`}>
             ${showOwed ? '2,300.00' : '350.00'}
           </p>
-          <p className="text-sm opacity-80">
+          <p className="text-sm">
             Total Amount {showOwed ? 'You Owe' : 'Owed to You'}
           </p>
         </div>
@@ -57,10 +57,10 @@ const LoansPage = () => {
           </button>
         </div>}
 
-        <div className="relative mb-8">
+        <div className=" mb-8">
           <div className="flex bg-gray-800 rounded-full p-1">
             <button
-              className={`flex-1 py-2 px-4 rounded-full transition-all duration-300 ${
+              className={`flex-1 py-2 px-4 rounded-full ${
                 showOwed ? 'bg-amber-500 text-black' : 'text-white'
               }`}
               onClick={() => setShowOwed(true)}
@@ -68,7 +68,7 @@ const LoansPage = () => {
               You Owe
             </button>
             <button
-              className={`flex-1 py-2 px-4 rounded-full transition-all duration-300 ${
+              className={`flex-1 py-2 px-4 rounded-full ${
                 !showOwed ? 'bg-amber-500 text-black' : 'text-white'
               }`}
               onClick={() => setShowOwed(false)}
@@ -89,7 +89,7 @@ const LoansPage = () => {
             {(showOwed ? youOweLoans : owedToYouLoans).map((loan) => (
               <div key={loan.id} className="bg-gray-800 rounded-xl p-4 flex items-center justify-between">
                 <div className="flex items-center">
-                  <img src="/api/placeholder/48/48" alt={loan.name} className="w-12 h-12 rounded-full mr-4" />
+                  {/* <img src="/api/placeholder/48/48" alt={loan.name} className="w-12 h-12 rounded-full mr-4" /> */}
                   <div>
                     <p className="font-semibold text-amber-500">
                       {loan.name} <span className="text-green-500 text-sm ml-2">{loan.status}</span>
@@ -99,9 +99,7 @@ const LoansPage = () => {
                 </div>
                 <div className="text-right">
                   <p className={`font-bold ${showOwed ? 'text-red-500' : 'text-green-500'}`}>${loan.amount}</p>
-                  <p className={`text-sm ${showOwed ? 'text-red-500' : 'text-green-500'}`}>
-                    {showOwed ? 'Owed' : 'Owed to You'}
-                  </p>
+                  <p className={`text-sm ${showOwed ? 'text-red-500' : 'text-green-500'}`}> {showOwed ? 'Owed' : 'Owed to You'} </p>
                 </div>
               </div>
             ))}
@@ -111,10 +109,7 @@ const LoansPage = () => {
         <div>
           <div className="flex justify-between items-center">
             <h3 className="text-xl font-semibold">Past Loans</h3>
-            <a href="#" className="text-amber-500 flex items-center">
-              View All
-              <ChevronRight className="w-4 h-4 ml-1" />
-            </a>
+            <a href="#" className="text-amber-500 flex items-center"> View All <ChevronRight className="w-4 h-4 ml-1" /> </a>
           </div>
         </div>
       </div>
@@ -122,5 +117,5 @@ const LoansPage = () => {
   );
 };
 
-// export default withAuth(LoansPage);
-export default LoansPage;
+export default withAuth(LoansPage);
+// export default LoansPage;
