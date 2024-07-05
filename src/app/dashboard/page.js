@@ -2,9 +2,7 @@
 "use client"
 import Link from "next/link"
 import React from "react"
-
 import withAuth from "../UserAuth"
-import { Bell } from 'lucide-react';
 
 const Dashboard = () => {
   const upcomingPayments = [

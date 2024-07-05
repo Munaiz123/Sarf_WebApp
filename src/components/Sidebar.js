@@ -29,7 +29,7 @@ export default function Component() {
           <Link href="/dashboard">
             <HomeIcon onClick={()=> setShowSidebar(!showSidebar)} className="w-8 h-8" />
           </Link>
-          <Link href="/dashboard/payments">
+          <Link href="/dashboard/loans">
             <DollarSignIcon onClick={()=> setShowSidebar(!showSidebar)} className="w-8 h-8" />
           </Link>
           
