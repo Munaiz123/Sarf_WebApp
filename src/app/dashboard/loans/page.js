@@ -43,7 +43,7 @@ const LoansPage = () => {
         <div className="flex space-x-4 mb-8">
           <button className="flex-1 bg-gradient-to-r from-amber-500 to-amber-400 text-black font-semibold py-3 px-4 rounded-full flex items-center justify-center">
             <Send className="w-4 h-4 mr-2" />
-            Send Single Payment
+            <Link href="/dashboard/loans/payment?freq=once">Send Single Payment</Link>
           </button>
           <button className="flex-1 bg-gradient-to-r from-amber-500 to-amber-400 text-black font-semibold py-3 px-4 rounded-full flex items-center justify-center">
             <RotateCcw className="w-4 h-4 mr-2" />

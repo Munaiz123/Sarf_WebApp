@@ -19,10 +19,10 @@ function ContractsDasboard() {
             </div> */}
               <h1 className="bg-gradient-to-r from-white to-amber-400 inline-block bg-clip-text text-transparent text-2xl font-bold">Contracts</h1>
 
-            <div className="bg-gradient-to-r from-amber-700 to-amber-600 rounded-3xl p-6 mb-8">
+            <div className="bg-gradient-to-r from-amber-400 to-amber-600 rounded-3xl p-6 mb-8">
               {/* <h2 className="text-xl mb-2">Contracts</h2> */}
               <p className="text-4xl font-bold mb-2">{activeContracts.length}</p>
-              <p className="text-sm opacity-80">Total Active Contracts</p>
+              <p className="text-sm">Total Active Contracts</p>
             </div>
 
             <button className="w-full bg-gradient-to-r from-amber-500 to-amber-400 text-black font-semibold py-3 px-4 rounded-full flex items-center justify-center mb-8">

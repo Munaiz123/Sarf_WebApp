@@ -9,9 +9,10 @@
     "lint": "next lint",
     "build-css": "tailwindcss build watch -i src/app/globals.css -o public/index.css",
     "watch-css": "tailwindcss build -i src/app/globals.css -o public/index.css --watch"
-
   },
   "dependencies": {
+    "@headlessui/react": "^2.1.2",
+    "@heroicons/react": "^2.1.5",
     "@radix-ui/react-icons": "^1.3.0",
     "@radix-ui/react-slot": "^1.0.2",
     "autoprefixer": "^10.4.19",
