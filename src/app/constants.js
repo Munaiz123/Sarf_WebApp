@@ -3,7 +3,7 @@ export const FINANCIAL_WELLNESS_DESC = "We believe in promoting financial wellne
 export const AUTOMATED_SYSTEM_DESC  = "By increasing trust and responsibility through an auto-pay system and digital contracts, Sarf removes the hassle of asking for loans back from friends and family."
 
 
-export const contacts = [
+export const openContracts = [
     { id: 1, name: 'Sherlock Holmes', email: 'detective@221b.com' },
     { id: 2, name: 'Tony Stark', email: 'ironman@stark.com' },
     { id: 3, name: 'Katniss Everdeen', email: 'mockingjay@district12.com' },

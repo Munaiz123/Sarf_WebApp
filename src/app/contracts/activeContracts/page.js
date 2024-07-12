@@ -1,16 +1,16 @@
 "use client"
 import React, { useState } from 'react';
-import { Search } from 'lucide-react';
+import { Search, SendHorizontal} from 'lucide-react';
 
 import { useRouter, useSearchParams } from 'next/navigation';
 
 import withAuth from "../../UserAuth"
-import PaymentModal from './PaymentModal'
+import PaymentModal from '../../../components/PaymentModal'
 import Link from "next/link"
 
-import { contacts } from '../../constants';
+import { openContracts } from '../../constants';
 
-const OneTimePaymentPage = () => {  
+const AllContracts = () => {  
   const router = useRouter()
   const searchParams = useSearchParams()
 
@@ -19,7 +19,7 @@ const OneTimePaymentPage = () => {
   const [contactOnModal, setContactOnModal] = useState(null)
 
 
-  const filteredContacts = contacts.filter(contact =>
+  const filteredContacts = openContracts.filter(contact =>
     contact.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
     contact.email.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -32,7 +32,8 @@ const OneTimePaymentPage = () => {
   return (
     <main>
         <div className="bg-black text-white p-6">
-            <h1 className="text-2xl font-bold mb-6">One-Time Payment</h1>
+            <h1 className="text-2xl font-bold mb-6">Send One Time Payment</h1>
+            <h2 className="text-xl font-semibold mb-4">Search Active Contracts</h2>
 
         <div className="mb-6">
             <Search className=" mt-3 ml-2 absolute text-gray-500" />
@@ -45,16 +46,15 @@ const OneTimePaymentPage = () => {
             />
         </div>
 
-        <h2 className="text-xl font-semibold mb-4">Contacts</h2>
         <div className="space-y-4">
             {filteredContacts.map(contact => (
-            <div key={contact.id} className="flex items-center space-x-4 bg-gray-800 rounded-xl p-4">
+            <div key={contact.id} className="flex items-center space-x-4 align-center justify-between bg-gray-800 rounded-xl p-4">
                 {/* <img src="/api/placeholder/48/48" alt={contact.name} className="w-12 h-12 rounded-full" /> */}
-                <div>
+                  <div>
                     <p className="font-semibold">{contact.name}</p>
                     <p className="text-sm text-gray-400">{contact.email}</p>
+                  </div>
                     <button contact={JSON.stringify(contact)} onClick={onClickContact}>Send Payment</button>
-                </div>
             </div>
             ))}
         </div>
@@ -66,5 +66,5 @@ const OneTimePaymentPage = () => {
   );
 };
 
-export default withAuth(OneTimePaymentPage);
-// export default OneTimePaymentPage;
+// export default withAuth(AllContracts);
+export default AllContracts;

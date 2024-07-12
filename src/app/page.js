@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link"
 
 import {FRIENDS_FAMILY_LOANS_DESC, AUTOMATED_SYSTEM_DESC, FINANCIAL_WELLNESS_DESC} from "../app/constants"
-import { BankNotes, UserGroupIcon, CheckIcon, MailIcon, PhoneIcon} from "../components/Icons";
+import { BankNotes, UserGroupIcon, CheckIcon, MailIcon} from "../components/Icons";
 
 export default () => {
   return (

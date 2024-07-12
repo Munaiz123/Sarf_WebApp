@@ -71,7 +71,7 @@ const  PaymentModal = ({openModal, contactDetails, setRenderModal}) => {
 
             <div className="flex items-center space-x-4 m-10">
                 <button className="flex-1 bg-yellow-500 text-black py-2 px-4 rounded-full"> Pay </button>
-                <button className="flex-1 bg-yellow-500 text-black py-2 px-4 rounded-full"> Request </button>
+                {/* <button className="flex-1 bg-yellow-500 text-black py-2 px-4 rounded-full"> Request </button> */}
             </div>
            
           </DialogPanel>
