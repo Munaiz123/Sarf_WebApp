@@ -1,5 +1,9 @@
+"use client"
 import React from 'react';
 import { Bell, Settings, Landmark } from 'lucide-react';
+import Link from 'next/link'
+
+import withAuth from '../UserAuth';
 
 const FinancialDashboard = () => {
   return (
@@ -9,7 +13,9 @@ const FinancialDashboard = () => {
             <header className="flex justify-between items-center mb-6">
                 <Bell className="text-white" size={24} />
                 <h1 className="text-xl font-bold">Tanjiro Kamado</h1>
-                <Settings className="text-white" size={24} />
+                <Link href="/profile/edit">
+                    <Settings className="text-white" size={24} />
+                </Link>
             </header>
 
             {/* Profile Picture */}
@@ -57,4 +63,5 @@ const FinancialDashboard = () => {
   );
 };
 
-export default FinancialDashboard;
+export default withAuth(FinancialDashboard);
+// export default FinancialDashboard
