@@ -30,10 +30,10 @@ const LoansPage = () => {
 
         <div className="flex space-x-4 mb-8">
           <button className="flex-1 bg-gradient-to-r from-amber-500 to-amber-400 text-black font-semibold py-3 px-4 rounded-full flex items-center justify-center">
-            <Link href="/contracts/activeContracts?freq=once">Send Single Payment</Link> 
+            <Link href="/contracts/activeContracts?type=Send&freq=One">Send Single Payment</Link> 
           </button>
           <button className="flex-1 bg-gradient-to-r from-amber-500 to-amber-400 text-black font-semibold py-3 px-4 rounded-full flex items-center justify-center">
-            Set Recurring Payment
+            <Link href="/contracts/activeContracts?type=Send&freq=multi">Set Recurring Payment</Link>  
           </button>
         </div>
 

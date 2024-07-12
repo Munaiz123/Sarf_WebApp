@@ -1,7 +1,7 @@
 
 "use client"
 import React, { useState } from 'react';
-import { Bell, Send, RotateCcw, ChevronRight, DollarSign } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 
 import Link from "next/link"
 import withAuth from "../UserAuth"
@@ -30,8 +30,10 @@ const RequestPage = () => {
         </div>
 
         <div className="flex space-x-4 mb-8">
-          <button className="flex-1 bg-gradient-to-r from-amber-500 to-amber-400 text-black font-semibold py-3 px-4 rounded-full flex items-center justify-center"> Request Single Payment </button>
-          <button className="flex-1 bg-gradient-to-r from-amber-500 to-amber-400 text-black font-semibold py-3 px-4 rounded-full flex items-center justify-center"> Request Reocurring Payment </button>
+          <button className="flex-1 bg-gradient-to-r from-amber-500 to-amber-400 text-black font-semibold py-3 px-4 rounded-full flex items-center justify-center"> 
+            <Link href="/contracts/activeContracts?type=Request&freq=One">Request Single Payment</Link> 
+          </button>
+          {/* <button className="flex-1 bg-gradient-to-r from-amber-500 to-amber-400 text-black font-semibold py-3 px-4 rounded-full flex items-center justify-center"> Request Reocurring Payment </button> */}
         </div>
 
         <div className="mb-8">

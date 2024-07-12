@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react'
 
-const  PaymentModal = ({openModal, contactDetails, setRenderModal}) => {
+const  PaymentModal = ({openModal, contactDetails, setRenderModal, paymentType}) => {
   const [open, setOpen] = useState(false)
   const [amount, setAmount] = useState("");
 
@@ -54,7 +54,8 @@ const  PaymentModal = ({openModal, contactDetails, setRenderModal}) => {
             <div className="bg-black px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
                 <DialogTitle className="text-4xl text-center text-amber-400 center font-bold mb-4">{contactDetails?.name}</DialogTitle>
                 <div className="m-2">
-                    <p className="text-sm text-center text-gray-500">Enter how amount you wish to pay back</p>
+                    {paymentType === 'Send' ? <p className="text-sm text-center text-gray-500">Enter how amount you wish to pay back</p>
+                    : <p className="text-sm text-center text-gray-500">Enter how amount you wish to request from barrower</p>}
                 </div>
 
                 <div className="text-center m-10 flex" >
@@ -70,8 +71,8 @@ const  PaymentModal = ({openModal, contactDetails, setRenderModal}) => {
             </div>
 
             <div className="flex items-center space-x-4 m-10">
-                <button className="flex-1 bg-yellow-500 text-black py-2 px-4 rounded-full"> Pay </button>
-                {/* <button className="flex-1 bg-yellow-500 text-black py-2 px-4 rounded-full"> Request </button> */}
+                {paymentType === 'Send' ? <button className="flex-1 bg-yellow-500 text-black py-2 px-4 rounded-full"> Pay </button> 
+                : <button className="flex-1 bg-yellow-500 text-black py-2 px-4 rounded-full"> Request </button> }
             </div>
            
           </DialogPanel>
