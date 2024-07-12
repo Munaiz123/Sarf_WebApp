@@ -1,7 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import {HomeIcon, DollarSignIcon, WalletIcon , PaperclipIcon, MenuIcon} from '../components/Icons'
+import { HomeIcon } from '../components/Icons'
+import { Menu, Wallet, Send, DollarSign } from 'lucide-react';
+
 import React from 'react'
 import Link from "next/link"
 import { useRouter } from 'next/navigation'
@@ -14,7 +16,7 @@ export default function Sidebar() {
   return (
       <div>
         <button>
-          <MenuIcon onClick={()=> setShowSidebar(!showSidebar)} className="lg:hidden xl:hidden" />
+          <Menu onClick={()=> setShowSidebar(!showSidebar)} className="lg:hidden xl:hidden" />
         </button>
         <div onMouseEnter={() => setIsExpanded(true)} onMouseLeave={() => !isPinned && setIsExpanded(false)}
           className={`lg:visible xl:visible fixed top-0 left-0 bottom-0 rounded-xl bg-amber-400 p-4 flex flex-col justify-around items-center transition-all duration-300 
@@ -23,18 +25,21 @@ export default function Sidebar() {
             ${showSidebar ? "" : "invisible"}`}
         >
           <button onClick={()=> setShowSidebar(!showSidebar)} className="lg:hidden xl:hidden w-8 h-8 text-black">
-            <MenuIcon />
+            <Menu />
           </button>
 
           <Link href="/dashboard">
-            <HomeIcon onClick={()=> setShowSidebar(!showSidebar)} className="w-8 h-8" />
+            <HomeIcon onClick={()=> setShowSidebar(!showSidebar)} className="w-8 text-black h-8" />
           </Link>
-          <Link href="/dashboard/loans">
-            <DollarSignIcon onClick={()=> setShowSidebar(!showSidebar)} className="w-8 h-8" />
+          <Link href="/loans">
+            <Send onClick={()=> setShowSidebar(!showSidebar)} className="w-8 text-black h-8" />
+          </Link>
+          <Link href="/requests">
+            <Send onClick={()=> setShowSidebar(!showSidebar)} className="w-8 text-black rotate-180 h-8" />
           </Link>
           
-          <Link href="/dashboard/contracts">
-            <WalletIcon onClick={()=> setShowSidebar(!showSidebar)} className="w-8 h-8" />
+          <Link href="/contracts">
+            <Wallet onClick={()=> setShowSidebar(!showSidebar)} className="w-8 text-black h-8" />
           </Link>
           {/** Uncomment the div below if you want to pin the side bar in the side bar. i don't think think its that necessary */}
           {/* <div className="flex items-center gap-2">

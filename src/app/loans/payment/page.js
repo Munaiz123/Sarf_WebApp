@@ -4,11 +4,11 @@ import { Search } from 'lucide-react';
 
 import { useRouter, useSearchParams } from 'next/navigation';
 
-import withAuth from "../../../UserAuth"
+import withAuth from "../../UserAuth"
 import PaymentModal from './PaymentModal'
 import Link from "next/link"
 
-import { contacts } from '../../../constants';
+import { contacts } from '../../constants';
 
 const OneTimePaymentPage = () => {  
   const router = useRouter()

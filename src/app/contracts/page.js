@@ -2,7 +2,7 @@
 "use client"
 import Link from "next/link"
 import React from "react"
-import withAuth from "../../UserAuth"
+import withAuth from "../UserAuth"
 import { Bell, Plus, ChevronRight } from 'lucide-react';
 
 function ContractsDasboard() {
