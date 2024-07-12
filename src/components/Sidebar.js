@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { HomeIcon } from '../components/Icons'
-import { Menu, Wallet, Send, DollarSign } from 'lucide-react';
+import { Menu, Wallet, Send, User } from 'lucide-react';
 
 import React from 'react'
 import Link from "next/link"
@@ -31,16 +31,23 @@ export default function Sidebar() {
           <Link href="/dashboard">
             <HomeIcon onClick={()=> setShowSidebar(!showSidebar)} className="w-8 text-black h-8" />
           </Link>
+
           <Link href="/loans">
             <Send onClick={()=> setShowSidebar(!showSidebar)} className="w-8 text-black h-8" />
           </Link>
+
           <Link href="/requests">
             <Send onClick={()=> setShowSidebar(!showSidebar)} className="w-8 text-black rotate-180 h-8" />
           </Link>
-          
+
           <Link href="/contracts">
             <Wallet onClick={()=> setShowSidebar(!showSidebar)} className="w-8 text-black h-8" />
           </Link>
+
+          <Link href="/profile">
+            <User onClick={()=> setShowSidebar(!showSidebar)} className="w-8 text-gray-500 h-8" />
+          </Link>
+
           {/** Uncomment the div below if you want to pin the side bar in the side bar. i don't think think its that necessary */}
           {/* <div className="flex items-center gap-2">
             {isExpanded && (
