@@ -66,5 +66,5 @@ const OneTimePaymentPage = () => {
   );
 };
 
-// export default withAuth(OneTimePaymentPage);
-export default OneTimePaymentPage;
+export default withAuth(OneTimePaymentPage);
+// export default OneTimePaymentPage;

@@ -77,5 +77,5 @@ const LoansPage = () => {
   );
 };
 
-// export default withAuth(LoansPage);
-export default LoansPage;
+export default withAuth(LoansPage);
+// export default LoansPage;

@@ -73,5 +73,5 @@ const RequestPage = () => {
   );
 };
 
-// export default withAuth(RequestPage);
-export default RequestPage;
+export default withAuth(RequestPage);
+// export default RequestPage;
