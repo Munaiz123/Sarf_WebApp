@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react';
-import { Search, SendHorizontal} from 'lucide-react';
+import { Search} from 'lucide-react';
 
 import { useRouter, useSearchParams } from 'next/navigation';
 

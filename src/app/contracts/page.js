@@ -25,10 +25,11 @@ function ContractsDasboard() {
               <p className="text-sm">Total Active Contracts</p>
             </div>
 
+            <Link href='/contracts/newContract'>
             <button className="w-full bg-gradient-to-r from-amber-500 to-amber-400 text-black font-semibold py-3 px-4 rounded-full flex items-center justify-center mb-8">
-              <Plus className="w-5 h-5 mr-2" />
-              New Contract
+              <Plus className="w-5 h-5 mr-2" /> New Contract
             </button>
+            </Link>
 
             <div className="mb-8">
               <div className="flex justify-between items-center mb-4">
